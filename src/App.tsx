@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import MovingPicture from "particalizor-3000";
+import "antd/dist/antd.css";
+import SliderWithLabel from "./components/slider-with-label/container/SliderWithLabel";
 
 const App: React.FC = () => {
+  const onChange = () => {};
+  let inputValue = 50;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SliderWithLabel label={"asd"} range={{ min: 0, max: 22 }} />
+      <MovingPicture imageSource={logo} />
     </div>
   );
-}
+};
 
 export default App;
