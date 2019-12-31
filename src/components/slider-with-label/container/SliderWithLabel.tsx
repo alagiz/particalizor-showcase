@@ -1,14 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import SliderWithLabelView from "../view/SliderWithLabelView";
 import { ISliderWithLabel } from "./ISliderWithLabel";
 import { SliderValue } from "antd/es/slider";
 
 export const SliderWithLabel: React.FC<ISliderWithLabel> = ({
+  propertyName,
+  onValueChange,
+  selectedValue,
   label,
   range
 }) => {
-  const [selectedValue, setSelectedValue] = useState<SliderValue>(range.min);
-  const onChange = (value: SliderValue) => setSelectedValue(value);
+  const onChange = (value: SliderValue) => onValueChange(value, propertyName);
 
   return (
     <SliderWithLabelView
