@@ -8,7 +8,8 @@ export const SliderWithLabel: React.FC<ISliderWithLabel> = ({
   onValueChange,
   selectedValue,
   label,
-  range
+  range,
+  step
 }) => {
   const onChange = (value: SliderValue) => onValueChange(value, propertyName);
 
@@ -18,6 +19,7 @@ export const SliderWithLabel: React.FC<ISliderWithLabel> = ({
       range={range}
       onChange={onChange}
       inputValue={selectedValue}
+      step={step}
     />
   );
 };

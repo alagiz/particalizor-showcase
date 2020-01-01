@@ -7,7 +7,8 @@ const SliderWithLabelView: React.FC<ISliderWithLabelView> = ({
   onChange,
   inputValue,
   label,
-  range
+  range,
+  step
 }) => {
   return (
     <Styled.SliderLabelContainer>
@@ -18,6 +19,7 @@ const SliderWithLabelView: React.FC<ISliderWithLabelView> = ({
           max={range.max}
           onChange={onChange}
           value={inputValue}
+          step={step}
         />
       </Styled.SliderContainer>
     </Styled.SliderLabelContainer>

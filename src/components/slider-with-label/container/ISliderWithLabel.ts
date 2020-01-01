@@ -5,6 +5,7 @@ export interface ISliderWithLabel {
   propertyName: string;
   selectedValue: SliderValue;
   label: string;
+  step?: number;
   range: {
     min: number;
     max: number;

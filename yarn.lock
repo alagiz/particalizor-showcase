@@ -7587,10 +7587,10 @@ parseurl@~1.3.2, parseurl@~1.3.3:
   resolved "https://registry.yarnpkg.com/parseurl/-/parseurl-1.3.3.tgz#9da19e7bee8d12dff0513ed5b76957793bc2e8d4"
   integrity sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==
 
-particalizor-3000@^0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/particalizor-3000/-/particalizor-3000-0.2.1.tgz#aaefd4e81390241da0b2a03224b6e2ae6e502d9a"
-  integrity sha512-ITuVvqJn/fUkuseGmD5EJKjVIzuJ+KVpLAIFf2wz1GXNQyoFrY1CQV9IVFqUXWp+8doAvavGsKdderAEyaRCqA==
+particalizor-3000@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/particalizor-3000/-/particalizor-3000-0.2.3.tgz#45cd0c348981e39e78d0f5afa9d8f4c049e92a6c"
+  integrity sha512-XBUOqMT4dmSWhIYVcN8mM9MecnLAD76vMRka7uepo0r3Hsj+isn+HLqwMgvvPn0XLrTGv6KYcBNduXQVSFixig==
   dependencies:
     ramda "^0.26.1"
     styled-components "^4.4.0"
