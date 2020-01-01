@@ -1,12 +1,34 @@
-.App {
-  background: #33344c;
-  color: white;
+body {
+  background: #33344c !important;
+  color: white !important;
+  padding: 10px;
+}
+
+#root {
+  height: 100%;
+}
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.properties-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.properties-set {
+  flex: 1;
 }
 
 .images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex: 1;
+  align-content: center;
 }
 
 .image-container:first-child {

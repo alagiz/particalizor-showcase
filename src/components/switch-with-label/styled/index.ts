@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 const SwitchWithLabelContainer = styled.div`
   display: flex;
-  margin: 10px;
+  height: 40px;
+  align-items: center;
 `;
 
 const SwitchLabel = styled.div`

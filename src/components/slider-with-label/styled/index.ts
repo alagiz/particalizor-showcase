@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 const SliderLabelContainer = styled.div`
   display: flex;
+  height: 40px;
+  align-items: center;
 `;
 
 const SliderLabel = styled.div`

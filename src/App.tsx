@@ -93,68 +93,74 @@ const App: React.FC = () => {
   ];
 
   return (
-    <div className="App">
-      <SliderWithLabel
-        propertyName={"particleNumber"}
-        selectedValue={selectedParticleNumberValue}
-        onValueChange={onChange}
-        label={"particle number"}
-        range={{ min: 0, max: 7000 }}
-        step={200}
-      />
-      <SliderWithLabel
-        propertyName={"particleTraceWidthValue"}
-        selectedValue={selectedParticleTraceWidthValue}
-        onValueChange={onTraceWidthChange}
-        label={"particle trace width"}
-        range={{ min: 0, max: 8 }}
-      />
-      <SliderWithLabel
-        propertyName={"particleVelocityValue"}
-        selectedValue={selectedParticleVelocityValue}
-        onValueChange={onVelocityChange}
-        label={"particle velocity"}
-        range={{ min: 0, max: 10 }}
-      />
-      <SliderWithLabel
-        propertyName={"particleLifeTimeValue"}
-        selectedValue={selectedParticleLifeTimeValue}
-        onValueChange={onLifeTimeChange}
-        label={"particle life time"}
-        range={{ min: 0, max: 5000 }}
-        step={100}
-      />
-      <DropdownWithLabel
-        propertyName={"directionChannel"}
-        onValueChange={onDirectionChannelChange}
-        selectedValue={selectedDirectionChannelValue}
-        label={"direction"}
-        defaultValue={"saturation"}
-        options={directionHueOptions}
-      />
-      <DropdownWithLabel
-        propertyName={"hueChannel"}
-        onValueChange={onHueChannelChange}
-        selectedValue={selectedHueChannelValue}
-        label={"hue channel"}
-        defaultValue={"blue"}
-        options={directionHueOptions}
-      />
-      <SwitchWithLabel
-        propertyName={"hueReverse"}
-        onValueChange={onHueReverseChange}
-        label={"hue reversed"}
-        defaultValue={false}
-      />
-      <SwitchWithLabel
-        propertyName={"directionReverse"}
-        onValueChange={onDirectionReverseChange}
-        label={"direction reversed"}
-        defaultValue={false}
-      />
+    <div className={"top-container"}>
+      <div className="properties-container">
+        <div className={"properties-set"}>
+          <SliderWithLabel
+            propertyName={"particleNumber"}
+            selectedValue={selectedParticleNumberValue}
+            onValueChange={onChange}
+            label={"particle number"}
+            range={{ min: 0, max: 7000 }}
+            step={200}
+          />
+          <SliderWithLabel
+            propertyName={"particleTraceWidthValue"}
+            selectedValue={selectedParticleTraceWidthValue}
+            onValueChange={onTraceWidthChange}
+            label={"particle trace width"}
+            range={{ min: 0, max: 8 }}
+          />
+          <SliderWithLabel
+            propertyName={"particleVelocityValue"}
+            selectedValue={selectedParticleVelocityValue}
+            onValueChange={onVelocityChange}
+            label={"particle velocity"}
+            range={{ min: 0, max: 10 }}
+          />
+          <SliderWithLabel
+            propertyName={"particleLifeTimeValue"}
+            selectedValue={selectedParticleLifeTimeValue}
+            onValueChange={onLifeTimeChange}
+            label={"particle life time"}
+            range={{ min: 0, max: 5000 }}
+            step={100}
+          />
+        </div>
+        <div className={"properties-set"}>
+          <DropdownWithLabel
+            propertyName={"directionChannel"}
+            onValueChange={onDirectionChannelChange}
+            selectedValue={selectedDirectionChannelValue}
+            label={"direction"}
+            defaultValue={"saturation"}
+            options={directionHueOptions}
+          />
+          <DropdownWithLabel
+            propertyName={"hueChannel"}
+            onValueChange={onHueChannelChange}
+            selectedValue={selectedHueChannelValue}
+            label={"hue channel"}
+            defaultValue={"blue"}
+            options={directionHueOptions}
+          />
+          <SwitchWithLabel
+            propertyName={"hueReverse"}
+            onValueChange={onHueReverseChange}
+            label={"hue reversed"}
+            defaultValue={false}
+          />
+          <SwitchWithLabel
+            propertyName={"directionReverse"}
+            onValueChange={onDirectionReverseChange}
+            label={"direction reversed"}
+            defaultValue={false}
+          />
+        </div>
+      </div>
       <div className={"images"}>
         <div className={"image-container"}>
-          <img src={cadillac} alt={"original-image"} />
+          <img src={cadillac} alt={"original"} />
         </div>
         <div className={"image-container"}>
           <MovingPicture
