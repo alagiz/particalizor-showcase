@@ -133,7 +133,7 @@ const App: React.FC = () => {
             onValueChange={onDirectionChannelChange}
             selectedValue={selectedDirectionChannelValue}
             label={"direction"}
-            defaultValue={"saturation"}
+            defaultValue={selectedDirectionChannelValue}
             options={directionHueOptions}
           />
           <DropdownWithLabel
@@ -141,7 +141,7 @@ const App: React.FC = () => {
             onValueChange={onHueChannelChange}
             selectedValue={selectedHueChannelValue}
             label={"hue channel"}
-            defaultValue={"blue"}
+            defaultValue={selectedHueChannelValue}
             options={directionHueOptions}
           />
           <SwitchWithLabel
