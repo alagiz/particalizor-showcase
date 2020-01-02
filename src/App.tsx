@@ -109,7 +109,7 @@ const App: React.FC = () => {
             selectedValue={selectedParticleTraceWidthValue}
             onValueChange={onTraceWidthChange}
             label={"particle trace width"}
-            range={{ min: 0, max: 8 }}
+            range={{ min: 0, max: 10 }}
           />
           <SliderWithLabel
             propertyName={"particleVelocityValue"}
@@ -123,7 +123,7 @@ const App: React.FC = () => {
             selectedValue={selectedParticleLifeTimeValue}
             onValueChange={onLifeTimeChange}
             label={"particle life time"}
-            range={{ min: 0, max: 5000 }}
+            range={{ min: 0, max: 1000 }}
             step={100}
           />
         </div>
