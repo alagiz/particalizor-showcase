@@ -148,13 +148,13 @@ const App: React.FC = () => {
             propertyName={"hueReverse"}
             onValueChange={onHueReverseChange}
             label={"hue reversed"}
-            defaultValue={false}
+            defaultValue={selectedHueReversedValue}
           />
           <SwitchWithLabel
             propertyName={"directionReverse"}
             onValueChange={onDirectionReverseChange}
             label={"direction reversed"}
-            defaultValue={false}
+            defaultValue={selectedDirectionReversedValue}
           />
         </div>
       </div>
