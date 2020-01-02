@@ -1,0 +1,7 @@
+version: '3.2'
+services:
+  particalizor-showcase-react:
+    image: alagiz/particalizor-showcase
+    command: nginx -g "daemon off;"
+    ports:
+      - "8080:80"
