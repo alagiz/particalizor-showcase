@@ -12,58 +12,57 @@ const App: React.FC = () => {
   const [
     selectedParticleNumberValue,
     setSelectedParticleNumberValue
-  ] = useState<number>(0);
+  ] = useState<number>(400);
   const [
     selectedParticleTraceWidthValue,
     setSelectedParticleTraceWidthValue
-  ] = useState<number>(0);
+  ] = useState<number>(2);
   const [
     selectedParticleVelocityValue,
     setSelectedParticleVelocityValue
-  ] = useState<number>(0);
+  ] = useState<number>(2);
   const [
     selectedParticleLifeTimeValue,
     setSelectedParticleLifeTimeValue
-  ] = useState<number>(0);
+  ] = useState<number>(100);
   const [
     selectedDirectionChannelValue,
     setSelectedDirectionChannelValue
   ] = useState<string>("hue");
   const [selectedHueChannelValue, setSelectedHueChannelValue] = useState<
     string
-  >("blue");
+  >("red");
   const [selectedHueReversedValue, setSelectedHueReversedValue] = useState<
     boolean
-  >(false);
+  >(true);
   const [
     selectedDirectionReversedValue,
     setSelectedDirectionReversedValue
   ] = useState<boolean>(false);
 
-  const onChange = (value: SliderValue) => {
+  const onChange = (value: SliderValue) =>
     setSelectedParticleNumberValue(value as number);
-  };
-  const onTraceWidthChange = (value: SliderValue) => {
+
+  const onTraceWidthChange = (value: SliderValue) =>
     setSelectedParticleTraceWidthValue(value as number);
-  };
-  const onVelocityChange = (value: SliderValue) => {
+
+  const onVelocityChange = (value: SliderValue) =>
     setSelectedParticleVelocityValue(value as number);
-  };
-  const onLifeTimeChange = (value: SliderValue) => {
+
+  const onLifeTimeChange = (value: SliderValue) =>
     setSelectedParticleLifeTimeValue(value as number);
-  };
-  const onDirectionChannelChange = (value: string) => {
+
+  const onDirectionChannelChange = (value: string) =>
     setSelectedDirectionChannelValue(value);
-  };
+
   const onHueChannelChange = (value: string) => {
     setSelectedHueChannelValue(value);
   };
-  const onHueReverseChange = (value: boolean) => {
+  const onHueReverseChange = (value: boolean) =>
     setSelectedHueReversedValue(value);
-  };
-  const onDirectionReverseChange = (value: boolean) => {
+
+  const onDirectionReverseChange = (value: boolean) =>
     setSelectedDirectionReversedValue(value);
-  };
 
   const directionHueOptions = [
     {
@@ -101,7 +100,7 @@ const App: React.FC = () => {
             selectedValue={selectedParticleNumberValue}
             onValueChange={onChange}
             label={"particle number"}
-            range={{ min: 0, max: 7000 }}
+            range={{ min: 200, max: 7000 }}
             step={200}
           />
           <SliderWithLabel
@@ -109,21 +108,21 @@ const App: React.FC = () => {
             selectedValue={selectedParticleTraceWidthValue}
             onValueChange={onTraceWidthChange}
             label={"particle trace width"}
-            range={{ min: 0, max: 10 }}
+            range={{ min: 1, max: 10 }}
           />
           <SliderWithLabel
             propertyName={"particleVelocityValue"}
             selectedValue={selectedParticleVelocityValue}
             onValueChange={onVelocityChange}
             label={"particle velocity"}
-            range={{ min: 0, max: 10 }}
+            range={{ min: 1, max: 10 }}
           />
           <SliderWithLabel
             propertyName={"particleLifeTimeValue"}
             selectedValue={selectedParticleLifeTimeValue}
             onValueChange={onLifeTimeChange}
             label={"particle life time"}
-            range={{ min: 0, max: 1000 }}
+            range={{ min: 100, max: 1000 }}
             step={100}
           />
         </div>
@@ -140,7 +139,7 @@ const App: React.FC = () => {
             propertyName={"hueChannel"}
             onValueChange={onHueChannelChange}
             selectedValue={selectedHueChannelValue}
-            label={"hue channel"}
+            label={"hue"}
             defaultValue={selectedHueChannelValue}
             options={directionHueOptions}
           />
