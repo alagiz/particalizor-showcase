@@ -1,7 +1,7 @@
 # particalizor-showcase
 live demo for [particalizor-3000](https://github.com/ArtemAlagizov/particalizor-3000)
 
-available here at the moment => http://3.13.45.208:8080/ (static image for now)
+available here at the moment => http://3.13.90.180:8080/ (static image for now)
 
 ## deployment
 * the app is deployed to a Docker Swarm cluster running on a single node (AWS EC2 t2.micro)
