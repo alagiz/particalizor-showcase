@@ -38,7 +38,7 @@ const App: React.FC = () => {
   const [
     selectedDirectionReversedValue,
     setSelectedDirectionReversedValue
-  ] = useState<boolean>(false);
+  ] = useState<boolean>(true);
 
   const onChange = (value: SliderValue) =>
     setSelectedParticleNumberValue(value as number);
