@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import cadillac from "./cadillac.jpg";
 import "./App.css";
-import MovingPicture from "particalizor-3000";
+import { MovingPicture } from "particalizor-3000";
 import "antd/dist/antd.css";
 import SliderWithLabel from "./components/slider-with-label/container/SliderWithLabel";
 import { SliderValue } from "antd/es/slider";
