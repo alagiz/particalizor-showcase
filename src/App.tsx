@@ -20,7 +20,7 @@ const App: React.FC = () => {
   const [
     selectedParticleVelocityValue,
     setSelectedParticleVelocityValue
-  ] = useState<number>(2);
+  ] = useState<number>(1);
   const [
     selectedParticleLifeTimeValue,
     setSelectedParticleLifeTimeValue
