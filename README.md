@@ -10,7 +10,7 @@ available here at the moment => http://3.13.90.180:8080/ (static image for now)
     ```
     docker swarm init --advertise-addr 172.31.19.6
     ```
-  * create stack of services for skyscanner-clone-prototype
+  * create stack of services for particalizor-showcase
     ```
     docker stack deploy -c docker-compose.depl.yml particleStackk
     ```
