@@ -17,10 +17,12 @@ body {
 .properties-container {
   display: flex;
   flex-direction: row-reverse;
+  flex-wrap: wrap;
 }
 
 .properties-set {
   flex: 1;
+  min-width: 500px;
 }
 
 .images {
