@@ -12,7 +12,7 @@ const App: React.FC = () => {
   const [
     selectedParticleNumberValue,
     setSelectedParticleNumberValue
-  ] = useState<number>(400);
+  ] = useState<number>(2400);
   const [
     selectedParticleTraceWidthValue,
     setSelectedParticleTraceWidthValue
@@ -31,10 +31,10 @@ const App: React.FC = () => {
   ] = useState<string>("hue");
   const [selectedHueChannelValue, setSelectedHueChannelValue] = useState<
     string
-  >("red");
+  >("saturation");
   const [selectedHueReversedValue, setSelectedHueReversedValue] = useState<
     boolean
-  >(true);
+  >(false);
   const [
     selectedDirectionReversedValue,
     setSelectedDirectionReversedValue
