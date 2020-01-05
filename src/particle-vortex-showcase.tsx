@@ -46,10 +46,8 @@ const ParticleVortexShowcase: React.FC = () => {
   const onImageHeightChange = (value: SliderValue) =>
     setSelectedImageHeight(value as number);
 
-  const onBackgroundColorChange = (value: string) => {
-    console.log(value);
+  const onBackgroundColorChange = (value: string) =>
     setSelectedBackgroundColor(value as string);
-  };
 
   return (
     <div className={"top-container"}>
