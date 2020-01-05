@@ -21,6 +21,8 @@ const ParticleVortexShowcase: React.FC = () => {
   const [selectedVortexNumberValue, setSelectedVortexNumberValue] = useState<
     number
   >(7);
+  const [selectedImageHeight, setSelectedImageHeight] = useState<number>(400);
+  const [selectedImageWidth, setSelectedImageWidth] = useState<number>(800);
 
   const onChange = (value: SliderValue) =>
     setSelectedParticleNumberValue(value as number);
@@ -33,6 +35,12 @@ const ParticleVortexShowcase: React.FC = () => {
 
   const onVortexNumberChange = (value: SliderValue) =>
     setSelectedVortexNumberValue(value as number);
+
+  const onImageWidthChange = (value: SliderValue) =>
+    setSelectedImageWidth(value as number);
+
+  const onImageHeightChange = (value: SliderValue) =>
+    setSelectedImageHeight(value as number);
 
   return (
     <div className={"top-container"}>
@@ -70,13 +78,31 @@ const ParticleVortexShowcase: React.FC = () => {
               range={{ min: 1, max: 20 }}
             />
           </div>
+          <div className={"properties-set"}>
+            <SliderWithLabel
+              propertyName={"imageWidth"}
+              selectedValue={selectedImageWidth}
+              onValueChange={onImageWidthChange}
+              label={"image width"}
+              range={{ min: 200, max: 1200 }}
+              step={100}
+            />
+            <SliderWithLabel
+              propertyName={"imageHeight"}
+              selectedValue={selectedImageHeight}
+              onValueChange={onImageHeightChange}
+              label={"image height"}
+              range={{ min: 200, max: 1200 }}
+              step={100}
+            />
+          </div>
         </div>
         <div className={"images"}>
           <div className={"image-container"}>
             <ParticleVortex
               key={Date.now()}
-              imageWidth={840}
-              imageHeight={384}
+              imageWidth={selectedImageWidth}
+              imageHeight={selectedImageHeight}
               vortexNumber={selectedVortexNumberValue}
               particleTraceWidth={selectedParticleTraceWidthValue}
               particleNumber={selectedParticleNumberValue}
