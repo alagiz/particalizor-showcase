@@ -1,180 +1,40 @@
 import React, { useState } from "react";
-import cadillac from "./cadillac.jpg";
 import "./App.css";
-import { MovingPicture } from "particalizor-3000";
 import "antd/dist/antd.css";
-import SliderWithLabel from "./components/slider-with-label/container/SliderWithLabel";
-import { SliderValue } from "antd/es/slider";
-import DropdownWithLabel from "./components/dropdown-with-label/container/DropdownWithLabel";
-import SwitchWithLabel from "./components/switch-with-label/container/SwitchWithLabel";
+import MovingPictureShowcase from "./moving-picture-showcase";
+import ParticleVortexShowcase from "./particle-vortex-showcase";
 
 const App: React.FC = () => {
-  const [
-    selectedParticleNumberValue,
-    setSelectedParticleNumberValue
-  ] = useState<number>(2400);
-  const [
-    selectedParticleTraceWidthValue,
-    setSelectedParticleTraceWidthValue
-  ] = useState<number>(2);
-  const [
-    selectedParticleVelocityValue,
-    setSelectedParticleVelocityValue
-  ] = useState<number>(1);
-  const [
-    selectedParticleLifeTimeValue,
-    setSelectedParticleLifeTimeValue
-  ] = useState<number>(100);
-  const [
-    selectedDirectionChannelValue,
-    setSelectedDirectionChannelValue
-  ] = useState<string>("hue");
-  const [selectedHueChannelValue, setSelectedHueChannelValue] = useState<
-    string
-  >("saturation");
-  const [selectedHueReversedValue, setSelectedHueReversedValue] = useState<
-    boolean
-  >(false);
-  const [
-    selectedDirectionReversedValue,
-    setSelectedDirectionReversedValue
-  ] = useState<boolean>(true);
+  const [selectedShowcase, setSelectedShowcase] = useState<string>(
+    "moving-picture"
+  );
 
-  const onChange = (value: SliderValue) =>
-    setSelectedParticleNumberValue(value as number);
-
-  const onTraceWidthChange = (value: SliderValue) =>
-    setSelectedParticleTraceWidthValue(value as number);
-
-  const onVelocityChange = (value: SliderValue) =>
-    setSelectedParticleVelocityValue(value as number);
-
-  const onLifeTimeChange = (value: SliderValue) =>
-    setSelectedParticleLifeTimeValue(value as number);
-
-  const onDirectionChannelChange = (value: string) =>
-    setSelectedDirectionChannelValue(value);
-
-  const onHueChannelChange = (value: string) => {
-    setSelectedHueChannelValue(value);
+  const switchShowcase = () => {
+    setSelectedShowcase(
+      selectedShowcase === "moving-picture"
+        ? "particle-vortex"
+        : "moving-picture"
+    );
   };
-  const onHueReverseChange = (value: boolean) =>
-    setSelectedHueReversedValue(value);
 
-  const onDirectionReverseChange = (value: boolean) =>
-    setSelectedDirectionReversedValue(value);
+  const switchButtonTitle =
+    selectedShowcase === "moving-picture"
+      ? "THIS IS MOVING PICTURE, CLICK TO SEE PARTICLE VORTEX"
+      : "THIS IS PARTICLE VORTEX, CLICK TO SEE MOVING PICTURE";
 
-  const directionHueOptions = [
-    {
-      value: "hue",
-      title: "hue"
-    },
-    {
-      value: "saturation",
-      title: "saturation"
-    },
-    {
-      value: "light",
-      title: "light"
-    },
-    {
-      value: "red",
-      title: "red"
-    },
-    {
-      value: "green",
-      title: "green"
-    },
-    {
-      value: "blue",
-      title: "blue"
-    }
-  ];
+  const componentToDisplay =
+    selectedShowcase === "moving-picture" ? (
+      <MovingPictureShowcase />
+    ) : (
+      <ParticleVortexShowcase />
+    );
 
   return (
     <div className={"top-container"}>
-      <div className="properties-container">
-        <div className={"properties-set"}>
-          <SliderWithLabel
-            propertyName={"particleNumber"}
-            selectedValue={selectedParticleNumberValue}
-            onValueChange={onChange}
-            label={"particle number"}
-            range={{ min: 200, max: 7000 }}
-            step={200}
-          />
-          <SliderWithLabel
-            propertyName={"particleTraceWidthValue"}
-            selectedValue={selectedParticleTraceWidthValue}
-            onValueChange={onTraceWidthChange}
-            label={"particle trace width"}
-            range={{ min: 1, max: 10 }}
-          />
-          <SliderWithLabel
-            propertyName={"particleVelocityValue"}
-            selectedValue={selectedParticleVelocityValue}
-            onValueChange={onVelocityChange}
-            label={"particle velocity"}
-            range={{ min: 1, max: 10 }}
-          />
-          <SliderWithLabel
-            propertyName={"particleLifeTimeValue"}
-            selectedValue={selectedParticleLifeTimeValue}
-            onValueChange={onLifeTimeChange}
-            label={"particle life time"}
-            range={{ min: 100, max: 1000 }}
-            step={100}
-          />
-        </div>
-        <div className={"properties-set"}>
-          <DropdownWithLabel
-            propertyName={"directionChannel"}
-            onValueChange={onDirectionChannelChange}
-            selectedValue={selectedDirectionChannelValue}
-            label={"direction"}
-            defaultValue={selectedDirectionChannelValue}
-            options={directionHueOptions}
-          />
-          <DropdownWithLabel
-            propertyName={"hueChannel"}
-            onValueChange={onHueChannelChange}
-            selectedValue={selectedHueChannelValue}
-            label={"hue"}
-            defaultValue={selectedHueChannelValue}
-            options={directionHueOptions}
-          />
-          <SwitchWithLabel
-            propertyName={"hueReverse"}
-            onValueChange={onHueReverseChange}
-            label={"hue reversed"}
-            defaultValue={selectedHueReversedValue}
-          />
-          <SwitchWithLabel
-            propertyName={"directionReverse"}
-            onValueChange={onDirectionReverseChange}
-            label={"direction reversed"}
-            defaultValue={selectedDirectionReversedValue}
-          />
-        </div>
+      <div className={"showcase-switch"} onClick={switchShowcase}>
+        {switchButtonTitle}
       </div>
-      <div className={"images"}>
-        <div className={"image-container"}>
-          <img src={cadillac} alt={"original"} />
-        </div>
-        <div className={"image-container"}>
-          <MovingPicture
-            imageSource={cadillac}
-            particleTraceWidth={selectedParticleTraceWidthValue}
-            particleVelocity={selectedParticleVelocityValue}
-            particleNumber={selectedParticleNumberValue}
-            particleLifeTime={selectedParticleLifeTimeValue}
-            directionChannel={selectedDirectionChannelValue}
-            hueChannel={selectedHueChannelValue}
-            reverseHue={selectedHueReversedValue}
-            reverseDirection={selectedDirectionReversedValue}
-          />
-        </div>
-      </div>
+      {componentToDisplay}
     </div>
   );
 };
