@@ -4,6 +4,7 @@ import { ParticleVortex } from "particalizor-3000";
 import "antd/dist/antd.css";
 import SliderWithLabel from "./components/slider-with-label/container/SliderWithLabel";
 import { SliderValue } from "antd/es/slider";
+import InputWithLabel from "./components/input-with-label/container/InputWithLabel";
 
 const ParticleVortexShowcase: React.FC = () => {
   const [
@@ -23,6 +24,9 @@ const ParticleVortexShowcase: React.FC = () => {
   >(7);
   const [selectedImageHeight, setSelectedImageHeight] = useState<number>(400);
   const [selectedImageWidth, setSelectedImageWidth] = useState<number>(800);
+  const [selectedBackgroundColor, setSelectedBackgroundColor] = useState<
+    string
+  >("#33344c");
 
   const onChange = (value: SliderValue) =>
     setSelectedParticleNumberValue(value as number);
@@ -41,6 +45,11 @@ const ParticleVortexShowcase: React.FC = () => {
 
   const onImageHeightChange = (value: SliderValue) =>
     setSelectedImageHeight(value as number);
+
+  const onBackgroundColorChange = (value: string) => {
+    console.log(value);
+    setSelectedBackgroundColor(value as string);
+  };
 
   return (
     <div className={"top-container"}>
@@ -95,6 +104,13 @@ const ParticleVortexShowcase: React.FC = () => {
               range={{ min: 200, max: 1200 }}
               step={100}
             />
+            <InputWithLabel
+              propertyName={"backgroundColor"}
+              defaultValue={"#33344c"}
+              label={"background color"}
+              onValueChange={onBackgroundColorChange}
+              selectedValue={selectedBackgroundColor}
+            />
           </div>
         </div>
         <div className={"images"}>
@@ -107,6 +123,7 @@ const ParticleVortexShowcase: React.FC = () => {
               particleTraceWidth={selectedParticleTraceWidthValue}
               particleNumber={selectedParticleNumberValue}
               particleLifeTime={selectedParticleLifeTimeValue}
+              backgroundColor={selectedBackgroundColor}
             />
           </div>
         </div>
