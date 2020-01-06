@@ -1,4 +1,6 @@
 # particalizor-showcase
+[![build status][build badge]][BUILD_URL]
+
 live demo for [particalizor-3000](https://github.com/ArtemAlagizov/particalizor-3000)
 
 available here at the moment => http://3.13.90.180:8080/ (static image for moving picture component for now)
@@ -14,3 +16,6 @@ available here at the moment => http://3.13.90.180:8080/ (static image for movin
     ```
     docker stack deploy -c docker-compose.depl.yml particleStackk
     ```
+
+[BUILD_URL]: https://travis-ci.org/ArtemAlagizov/particalizor-showcase
+[build badge]: https://img.shields.io/travis/ArtemAlagizov/particalizor-showcase/master?style=flat-square
