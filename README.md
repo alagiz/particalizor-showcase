@@ -20,8 +20,8 @@ available here at the moment => http://3.13.90.180:8080/ (static image for movin
 ## ci/cd
 * on every pull request merge to master and push to master travis runs yarn install and yarn build (yarn test and yarn lint to be added soon)
   * in case those commands were successful:
-     * new docker image is built and pushed to docker hub
-     * docker swarm stack is updated with the latest docker image
+     * new **docker** image is built and pushed to **docker hub**
+     * **docker swarm** stack is updated with the latest **docker** image
 
 [BUILD_URL]: https://travis-ci.org/ArtemAlagizov/particalizor-showcase
 [build badge]: https://img.shields.io/travis/ArtemAlagizov/particalizor-showcase/master?style=flat-square
