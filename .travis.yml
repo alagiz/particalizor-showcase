@@ -8,7 +8,7 @@ services:
   - docker
 script:
   - yarn install &&
-    yarn build
+    yarn build &&
     if [ "$TRAVIS_BRANCH" == "master" ]; then
       docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
       docker build . -t $IMAGE_NAME;
