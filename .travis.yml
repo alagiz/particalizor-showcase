@@ -30,3 +30,5 @@ script:
       aws ssm send-command --document-name "AWS-RunShellScript" --instance-ids $INSTANCE_ID --parameters '{"commands":['\""$RESULTING_COMMAND"\"'],"executionTimeout":["3600"]}' --timeout-seconds 600 --region $DEPLOYMENT_REGION;
     fi
 #TODO: concatenating strings as in --parameters above introduces vulnerability of possible command injection, it needs to change
+after_script:
+  - COVERALLS_REPO_TOKEN=$coveralls_repo_token npm run coveralls
