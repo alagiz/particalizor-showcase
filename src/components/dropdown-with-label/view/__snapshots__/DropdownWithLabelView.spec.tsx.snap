@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a DropdownWithLabelView when rendering should match snapshot 1`] = `
+<styled.div>
+  <styled.div />
+  <styled.div>
+    <Select
+      choiceTransitionName="zoom"
+      defaultValue=""
+      onChange={[MockFunction]}
+      showSearch={false}
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+      transitionName="slide-up"
+    />
+  </styled.div>
+</styled.div>
+`;

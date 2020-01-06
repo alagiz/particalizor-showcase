@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a InputWithLabelView when rendering should match snapshot 1`] = `
+<styled.div>
+  <styled.div />
+  <styled.div>
+    <Input
+      defaultValue=""
+      onChange={[MockFunction]}
+      placeholder="set background color"
+      type="text"
+    />
+  </styled.div>
+</styled.div>
+`;

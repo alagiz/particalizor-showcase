@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a SliderWithLabel when rendering should match snapshot 1`] = `
+<SliderWithLabelView
+  inputValue={1}
+  label=""
+  onChange={[Function]}
+  range={
+    Object {
+      "max": 2,
+      "min": 0,
+    }
+  }
+  step={1}
+/>
+`;

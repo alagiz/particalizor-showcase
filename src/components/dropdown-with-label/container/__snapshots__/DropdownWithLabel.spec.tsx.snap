@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a DropdownWithLabel when rendering should match snapshot 1`] = `
+<DropdownWithLabelView
+  defaultValue=""
+  label=""
+  onChange={[Function]}
+  options={Array []}
+/>
+`;

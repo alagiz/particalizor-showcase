@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a SwitchWithLabelView when rendering should match snapshot 1`] = `
+<styled.div>
+  <styled.div />
+  <styled.div>
+    <Switch
+      defaultChecked={false}
+      onChange={[MockFunction]}
+    />
+  </styled.div>
+</styled.div>
+`;

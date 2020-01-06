@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a SwitchWithLabel when rendering should match snapshot 1`] = `
+<SwitchWithLabelView
+  defaultValue={false}
+  label=""
+  onChange={[Function]}
+/>
+`;
