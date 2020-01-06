@@ -7,9 +7,9 @@ live demo for [particalizor-3000](https://github.com/ArtemAlagizov/particalizor-
 available here at the moment => http://3.13.90.180:8080/ (static image for moving picture component for now)
 
 ## deployment
-* the app is deployed to a docker swarm cluster running on a single node (aws ec2 t2.micro)
+* the app is deployed to a **docker swarm** cluster running on a single node (aws ec2 t2.micro)
 * the following commands were used to deploy the app:
-  * create docker swarm cluster
+  * create **docker swarm** cluster
     ```
     docker swarm init --advertise-addr 172.31.19.6
     ```
