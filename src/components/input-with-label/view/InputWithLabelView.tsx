@@ -1,7 +1,7 @@
 import React from "react";
 import { Styled } from "../styled";
 import { IInputWithLabelView } from "./IInputWithLabelView";
-import Input from "antd/es/input";
+import { Input } from "antd";
 
 const InputWithLabelView: React.FC<IInputWithLabelView> = ({
   onChange,
