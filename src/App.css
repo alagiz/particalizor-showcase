@@ -48,9 +48,41 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 30px;
+  padding: 5px 10px 5px 11px;
   background: #A8A8B2;
   color: black;
   cursor: pointer;
   font-weight: bold;
+}
+
+.drop-zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 400px;
+  min-height: 400px;
+  background: #A8A8B2;
+}
+
+.image-mode-switch {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  width: 50%;
+  padding: 5px 10px 5px 11px;
+  background: #A8A8B2;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dashed {
+  border: 2px dashed #999;
+}
+
+.drop-image-text {
+  padding: 10px;
 }

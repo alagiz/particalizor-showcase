@@ -7,6 +7,8 @@ import SliderWithLabel from "./components/slider-with-label/container/SliderWith
 import { SliderValue } from "antd/es/slider";
 import DropdownWithLabel from "./components/dropdown-with-label/container/DropdownWithLabel";
 import SwitchWithLabel from "./components/switch-with-label/container/SwitchWithLabel";
+import { isNil } from "ramda";
+import Dropzone from "react-dropzone";
 
 const MovingPictureShowcase: React.FC = () => {
   const [
@@ -39,6 +41,10 @@ const MovingPictureShowcase: React.FC = () => {
     selectedDirectionReversedValue,
     setSelectedDirectionReversedValue
   ] = useState<boolean>(false);
+  const [uploadedImage, setUploadedImage] = useState<File | null>(null);
+  const [selectedImageMode, setSelectedImageMode] = useState<string>(
+    "given-picture"
+  );
 
   const onChange = (value: SliderValue) =>
     setSelectedParticleNumberValue(value as number);
@@ -90,6 +96,19 @@ const MovingPictureShowcase: React.FC = () => {
       title: "blue"
     }
   ];
+
+  const switchImageMode = () => {
+    setSelectedImageMode(
+      selectedImageMode === "given-picture"
+        ? "uploaded-picture"
+        : "given-picture"
+    );
+  };
+
+  const switchButtonTitle =
+    selectedImageMode === "given-picture"
+      ? "THIS IS FIXED PICTURE MODE, CLICK TO SEE UPLOADED PICTURE MODE"
+      : "THIS IS UPLOADED PICTURE MODE, CLICK TO SEE FIXED PICTURE MODE";
 
   return (
     <div className={"showcase-component-container"}>
@@ -157,25 +176,89 @@ const MovingPictureShowcase: React.FC = () => {
           />
         </div>
       </div>
-      <div className={"images"}>
-        <div className={"image-container"}>
-          <img src={cadillac} alt={"original"} />
-        </div>
-        <div className={"image-container"}>
-          <MovingPicture
-            key={Date.now()}
-            imageSource={cadillac}
-            particleTraceWidth={selectedParticleTraceWidthValue}
-            particleVelocity={selectedParticleVelocityValue}
-            particleNumber={selectedParticleNumberValue}
-            particleLifeTime={selectedParticleLifeTimeValue}
-            directionChannel={selectedDirectionChannelValue}
-            hueChannel={selectedHueChannelValue}
-            reverseHue={selectedHueReversedValue}
-            reverseDirection={selectedDirectionReversedValue}
-          />
-        </div>
+      <div className={"image-mode-switch"} onClick={switchImageMode}>
+        {switchButtonTitle}
       </div>
+      {selectedImageMode === "uploaded-picture" && isNil(uploadedImage) && (
+        <div className={"images"}>
+          <div className={"image-container dashed"}>
+            <Dropzone
+              onDrop={(acceptedFiles: File[]) =>
+                setUploadedImage(acceptedFiles[0])
+              }
+            >
+              {({ getRootProps, getInputProps }) => (
+                <section>
+                  <div className={"drop-zone"} {...getRootProps()}>
+                    <input {...getInputProps()} />
+                    <div className={"drop-image-text"}>
+                      DRAG AND DROP AN IMAGE HERE, OR CLICK TO SELECT AN IMAGE
+                    </div>
+                  </div>
+                </section>
+              )}
+            </Dropzone>
+          </div>
+        </div>
+      )}
+      {selectedImageMode === "uploaded-picture" && !isNil(uploadedImage) && (
+        <div className={"images"}>
+          <div className={"image-container dashed"}>
+            <Dropzone
+              onDrop={(acceptedFiles: File[]) =>
+                setUploadedImage(acceptedFiles[0])
+              }
+            >
+              {({ getRootProps, getInputProps }) => (
+                <section>
+                  <div {...getRootProps()}>
+                    <input {...getInputProps()} />
+                    <img
+                      src={URL.createObjectURL(uploadedImage)}
+                      alt={"dropped"}
+                    />
+                  </div>
+                </section>
+              )}
+            </Dropzone>
+          </div>
+          <div className={"image-container"}>
+            <MovingPicture
+              key={Date.now()}
+              imageSource={URL.createObjectURL(uploadedImage)}
+              particleTraceWidth={selectedParticleTraceWidthValue}
+              particleVelocity={selectedParticleVelocityValue}
+              particleNumber={selectedParticleNumberValue}
+              particleLifeTime={selectedParticleLifeTimeValue}
+              directionChannel={selectedDirectionChannelValue}
+              hueChannel={selectedHueChannelValue}
+              reverseHue={selectedHueReversedValue}
+              reverseDirection={selectedDirectionReversedValue}
+            />
+          </div>
+        </div>
+      )}
+      {selectedImageMode === "given-picture" && (
+        <div className={"images"}>
+          <div className={"image-container"}>
+            <img src={cadillac} alt={"original"} />
+          </div>
+          <div className={"image-container"}>
+            <MovingPicture
+              key={Date.now()}
+              imageSource={cadillac}
+              particleTraceWidth={selectedParticleTraceWidthValue}
+              particleVelocity={selectedParticleVelocityValue}
+              particleNumber={selectedParticleNumberValue}
+              particleLifeTime={selectedParticleLifeTimeValue}
+              directionChannel={selectedDirectionChannelValue}
+              hueChannel={selectedHueChannelValue}
+              reverseHue={selectedHueReversedValue}
+              reverseDirection={selectedDirectionReversedValue}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
