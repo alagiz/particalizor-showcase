@@ -191,9 +191,9 @@ const MovingPictureShowcase: React.FC = () => {
                 <section>
                   <div className={"drop-zone"} {...getRootProps()}>
                     <input {...getInputProps()} />
-                    <p>
-                      Drag 'n' drop an image here, or click to select an image
-                    </p>
+                    <div className={"drop-image-text"}>
+                      DRAG AND DROP AN IMAGE HERE, OR CLICK TO SELECT AN IMAGE
+                    </div>
                   </div>
                 </section>
               )}
