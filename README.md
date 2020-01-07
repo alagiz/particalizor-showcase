@@ -4,7 +4,7 @@
 
 live demo for [particalizor-3000](https://github.com/ArtemAlagizov/particalizor-3000)
 
-available here at the moment => http://3.13.90.180:8080/ (static image for moving picture component for now)
+available here at the moment => http://3.13.90.180:8080/
 
 ## deployment
 * the app is deployed to a **docker swarm** cluster running on a single node (aws ec2 t2.micro)
