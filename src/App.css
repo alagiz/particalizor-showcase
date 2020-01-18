@@ -1,24 +1,28 @@
 body {
+  display: flex;
+  flex-direction: column;
   background: #33344c !important;
   color: white !important;
   padding: 10px;
 }
 
 #root {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .top-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  flex: 1;
 }
 
 .showcase-component-container {
   display: flex;
   flex-direction: column;
+  flex: 1;
   margin-top: 10px;
-  height: 100%;
 }
 
 .properties-container {
