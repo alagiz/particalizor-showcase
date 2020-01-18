@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a ParticleVortexShowcaseView when rendering should match snapshot 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <SliderWithLabel
+        label="particle number"
+        onValueChange={[MockFunction]}
+        propertyName="particleNumber"
+        range={
+          Object {
+            "max": 1990,
+            "min": 10,
+          }
+        }
+        selectedValue={1}
+        step={20}
+      />
+      <SliderWithLabel
+        label="particle trace width"
+        onValueChange={[MockFunction]}
+        propertyName="particleTraceWidthValue"
+        range={
+          Object {
+            "max": 800,
+            "min": 1,
+          }
+        }
+        selectedValue={1}
+      />
+      <SliderWithLabel
+        label="particle life time"
+        onValueChange={[MockFunction]}
+        propertyName="particleLifeTimeValue"
+        range={
+          Object {
+            "max": 7000,
+            "min": 100,
+          }
+        }
+        selectedValue={1}
+        step={100}
+      />
+      <SliderWithLabel
+        label="vortex number"
+        onValueChange={[MockFunction]}
+        propertyName="selectedVortexNumberValue"
+        range={
+          Object {
+            "max": 20,
+            "min": 1,
+          }
+        }
+        selectedValue={3}
+      />
+    </styled.div>
+    <styled.div>
+      <SliderWithLabel
+        label="image width"
+        onValueChange={[MockFunction]}
+        propertyName="imageWidth"
+        range={
+          Object {
+            "max": 1200,
+            "min": 200,
+          }
+        }
+        selectedValue={100}
+        step={100}
+      />
+      <SliderWithLabel
+        label="image height"
+        onValueChange={[MockFunction]}
+        propertyName="imageHeight"
+        range={
+          Object {
+            "max": 1200,
+            "min": 200,
+          }
+        }
+        selectedValue={100}
+        step={100}
+      />
+      <InputWithLabel
+        defaultValue="#33344c"
+        label="background color"
+        onValueChange={[MockFunction]}
+        propertyName="backgroundColor"
+        selectedValue="red"
+      />
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      <Component
+        backgroundColor="red"
+        imageHeight={100}
+        imageWidth={100}
+        particleLifeTime={1}
+        particleNumber={1}
+        particleTraceWidth={1}
+        vortexNumber={3}
+      />
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

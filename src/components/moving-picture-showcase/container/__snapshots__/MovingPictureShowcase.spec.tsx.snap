@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a MovingPictureShowcase when rendering should match snapshot 1`] = `
+<MovingPictureShowcaseView
+  directionChannelValue="saturation"
+  directionHueOptions={
+    Array [
+      Object {
+        "title": "hue",
+        "value": "hue",
+      },
+      Object {
+        "title": "saturation",
+        "value": "saturation",
+      },
+      Object {
+        "title": "light",
+        "value": "light",
+      },
+      Object {
+        "title": "red",
+        "value": "red",
+      },
+      Object {
+        "title": "green",
+        "value": "green",
+      },
+      Object {
+        "title": "blue",
+        "value": "blue",
+      },
+    ]
+  }
+  directionReversedValue={false}
+  hueChannelValue="blue"
+  hueReversedValue={false}
+  onDirectionChannelChange={[Function]}
+  onDirectionReverseChange={[Function]}
+  onDrop={[Function]}
+  onHueChannelChange={[Function]}
+  onHueReverseChange={[Function]}
+  onLifeTimeChange={[Function]}
+  onParticleNumberChange={[Function]}
+  onTraceWidthChange={[Function]}
+  onVelocityChange={[Function]}
+  particleLifeTimeValue={100}
+  particleNumberValue={2400}
+  particleTraceWidthValue={2}
+  particleVelocityValue={1}
+  selectedImageMode="given-picture"
+  switchButtonTitle="THIS IS FIXED PICTURE MODE, CLICK TO SEE UPLOADED PICTURE MODE"
+  switchImageMode={[Function]}
+  uploadedImage={null}
+/>
+`;

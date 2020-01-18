@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a App when rendering should match snapshot 1`] = `
+<AppView
+  showcase="moving-picture"
+  switchButtonTitle="THIS IS MOVING PICTURE, CLICK TO SEE PARTICLE VORTEX"
+  switchShowcase={[Function]}
+/>
+`;

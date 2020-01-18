@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a ParticleVortexShowcase when rendering should match snapshot 1`] = `
+<ParticleVortexShowcaseView
+  backgroundColor="#33344c"
+  imageHeight={500}
+  imageWidth={900}
+  onBackgroundColorChange={[Function]}
+  onImageHeightChange={[Function]}
+  onImageWidthChange={[Function]}
+  onLifeTimeChange={[Function]}
+  onParticleNumberChange={[Function]}
+  onTraceWidthChange={[Function]}
+  onVortexNumberChange={[Function]}
+  particleLifeTimeValue={1100}
+  particleNumberValue={30}
+  particleTraceWidthValue={600}
+  vortexNumberValue={3}
+/>
+`;

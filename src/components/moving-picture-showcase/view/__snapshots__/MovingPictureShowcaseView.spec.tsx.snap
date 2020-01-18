@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a MovingPictureShowcaseView when rendering should match snapshot 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <SliderWithLabel
+        label="particle number"
+        onValueChange={[MockFunction]}
+        propertyName="particleNumber"
+        range={
+          Object {
+            "max": 7000,
+            "min": 200,
+          }
+        }
+        selectedValue={1}
+        step={200}
+      />
+      <SliderWithLabel
+        label="particle trace width"
+        onValueChange={[MockFunction]}
+        propertyName="particleTraceWidthValue"
+        range={
+          Object {
+            "max": 10,
+            "min": 1,
+          }
+        }
+        selectedValue={1}
+      />
+      <SliderWithLabel
+        label="particle velocity"
+        onValueChange={[MockFunction]}
+        propertyName="particleVelocityValue"
+        range={
+          Object {
+            "max": 10,
+            "min": 1,
+          }
+        }
+        selectedValue={1}
+      />
+      <SliderWithLabel
+        label="particle life time"
+        onValueChange={[MockFunction]}
+        propertyName="particleLifeTimeValue"
+        range={
+          Object {
+            "max": 1000,
+            "min": 100,
+          }
+        }
+        selectedValue={1}
+        step={100}
+      />
+    </styled.div>
+    <styled.div>
+      <DropdownWithLabel
+        defaultValue="hue"
+        label="direction"
+        onValueChange={[MockFunction]}
+        options={Array []}
+        propertyName="directionChannel"
+        selectedValue="hue"
+      />
+      <DropdownWithLabel
+        defaultValue="red"
+        label="hue"
+        onValueChange={[MockFunction]}
+        options={Array []}
+        propertyName="hueChannel"
+        selectedValue="red"
+      />
+      <SwitchWithLabel
+        defaultValue={false}
+        label="hue reversed"
+        onValueChange={[MockFunction]}
+        propertyName="hueReverse"
+      />
+      <SwitchWithLabel
+        defaultValue={false}
+        label="direction reversed"
+        onValueChange={[MockFunction]}
+        propertyName="directionReverse"
+      />
+    </styled.div>
+  </styled.div>
+  <styled.div
+    onClick={[MockFunction]}
+  />
+</styled.div>
+`;
