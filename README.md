@@ -26,4 +26,4 @@ available here at the moment => http://3.13.90.180:8080/
 [BUILD_URL]: https://travis-ci.org/ArtemAlagizov/particalizor-showcase
 [build badge]: https://img.shields.io/travis/ArtemAlagizov/particalizor-showcase/master?style=flat-square
 [COVERAGE_URL]: https://coveralls.io/github/ArtemAlagizov/particalizor-showcase?branch=master
-[coverage badge]: https://img.shields.io/coveralls/github/ArtemAlagizov/particalizor-showcase.svg?style=flat-square&color=red
+[coverage badge]: https://img.shields.io/coveralls/github/ArtemAlagizov/particalizor-showcase.svg?style=flat-square&color=bright-green
