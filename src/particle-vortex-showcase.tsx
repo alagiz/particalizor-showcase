@@ -67,14 +67,14 @@ const ParticleVortexShowcase: React.FC = () => {
               selectedValue={selectedParticleTraceWidthValue}
               onValueChange={onTraceWidthChange}
               label={"particle trace width"}
-              range={{ min: 1, max: 1000 }}
+              range={{ min: 1, max: 800 }}
             />
             <SliderWithLabel
               propertyName={"particleLifeTimeValue"}
               selectedValue={selectedParticleLifeTimeValue}
               onValueChange={onLifeTimeChange}
               label={"particle life time"}
-              range={{ min: 100, max: 10000 }}
+              range={{ min: 100, max: 7000 }}
               step={100}
             />
             <SliderWithLabel

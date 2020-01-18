@@ -19,7 +19,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
-    "particalizor-3000": "^1.1.1",
+    "particalizor-3000": "^1.1.3",
     "prettier": "^1.19.1",
     "ramda": "^0.26.1",
     "react": "^16.12.0",
