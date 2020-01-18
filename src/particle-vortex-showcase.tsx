@@ -10,20 +10,20 @@ const ParticleVortexShowcase: React.FC = () => {
   const [
     selectedParticleNumberValue,
     setSelectedParticleNumberValue
-  ] = useState<number>(2400);
+  ] = useState<number>(30);
   const [
     selectedParticleTraceWidthValue,
     setSelectedParticleTraceWidthValue
-  ] = useState<number>(2);
+  ] = useState<number>(600);
   const [
     selectedParticleLifeTimeValue,
     setSelectedParticleLifeTimeValue
-  ] = useState<number>(100);
+  ] = useState<number>(1100);
   const [selectedVortexNumberValue, setSelectedVortexNumberValue] = useState<
     number
-  >(7);
-  const [selectedImageHeight, setSelectedImageHeight] = useState<number>(400);
-  const [selectedImageWidth, setSelectedImageWidth] = useState<number>(800);
+  >(3);
+  const [selectedImageHeight, setSelectedImageHeight] = useState<number>(500);
+  const [selectedImageWidth, setSelectedImageWidth] = useState<number>(900);
   const [selectedBackgroundColor, setSelectedBackgroundColor] = useState<
     string
   >("#33344c");
@@ -59,22 +59,22 @@ const ParticleVortexShowcase: React.FC = () => {
               selectedValue={selectedParticleNumberValue}
               onValueChange={onChange}
               label={"particle number"}
-              range={{ min: 200, max: 3000 }}
-              step={200}
+              range={{ min: 10, max: 2000 }}
+              step={20}
             />
             <SliderWithLabel
               propertyName={"particleTraceWidthValue"}
               selectedValue={selectedParticleTraceWidthValue}
               onValueChange={onTraceWidthChange}
               label={"particle trace width"}
-              range={{ min: 1, max: 10 }}
+              range={{ min: 1, max: 1000 }}
             />
             <SliderWithLabel
               propertyName={"particleLifeTimeValue"}
               selectedValue={selectedParticleLifeTimeValue}
               onValueChange={onLifeTimeChange}
               label={"particle life time"}
-              range={{ min: 100, max: 1000 }}
+              range={{ min: 100, max: 10000 }}
               step={100}
             />
             <SliderWithLabel
