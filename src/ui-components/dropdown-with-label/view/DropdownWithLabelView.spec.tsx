@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import DropdownWithLabelView from "../view/DropdownWithLabelView";
+import DropdownWithLabelView from "./DropdownWithLabelView";
 
 describe("Given a DropdownWithLabelView", () => {
   describe("when rendering", () => {

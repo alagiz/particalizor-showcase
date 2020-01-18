@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
-import "antd/dist/antd.css";
-import MovingPictureShowcase from "./moving-picture-showcase";
-import ParticleVortexShowcase from "./particle-vortex-showcase";
+import AppView from "../view/AppView";
 
 const App: React.FC = () => {
   const [selectedShowcase, setSelectedShowcase] = useState<string>(
@@ -22,20 +19,12 @@ const App: React.FC = () => {
       ? "THIS IS MOVING PICTURE, CLICK TO SEE PARTICLE VORTEX"
       : "THIS IS PARTICLE VORTEX, CLICK TO SEE MOVING PICTURE";
 
-  const componentToDisplay =
-    selectedShowcase === "moving-picture" ? (
-      <MovingPictureShowcase />
-    ) : (
-      <ParticleVortexShowcase />
-    );
-
   return (
-    <div className={"top-container"}>
-      <div className={"showcase-switch"} onClick={switchShowcase}>
-        {switchButtonTitle}
-      </div>
-      {componentToDisplay}
-    </div>
+    <AppView
+      switchShowcase={switchShowcase}
+      showcase={selectedShowcase}
+      switchButtonTitle={switchButtonTitle}
+    />
   );
 };
 

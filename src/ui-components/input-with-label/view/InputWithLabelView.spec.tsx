@@ -1,16 +1,12 @@
 import React from "react";
 import { shallow } from "enzyme";
-import SwitchWithLabelView from "../view/SwitchWithLabelView";
+import InputWithLabelView from "./InputWithLabelView";
 
-describe("Given a SwitchWithLabelView", () => {
+describe("Given a InputWithLabelView", () => {
   describe("when rendering", () => {
     it("should match snapshot", () => {
       const component = shallow(
-        <SwitchWithLabelView
-          onChange={jest.fn()}
-          label={""}
-          defaultValue={false}
-        />
+        <InputWithLabelView onChange={jest.fn()} label={""} defaultValue={""} />
       );
 
       expect(component).toMatchSnapshot();
