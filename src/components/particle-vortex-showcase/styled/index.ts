@@ -13,8 +13,7 @@ const PropertiesContainer = styled.div`
 `;
 
 const PropertiesSet = styled.div`
-  flex: 1;
-  min-width: 300px;
+  flex: 1 1 300px;
 `;
 
 const Images = styled.div`
