@@ -18,6 +18,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test --coverage --watchAll=false",
+    "lint": "eslint src/**/*.{js,ts,tsx}",
     "eject": "react-scripts eject",
     "coverage": "react-app-rewired test --coverage --watchAll=false",
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls"
@@ -60,6 +61,11 @@
     "coveralls": "^3.0.9",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
     "enzyme-to-json": "^3.4.0",
     "jest-canvas-mock": "^2.2.0"
   }

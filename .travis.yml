@@ -9,6 +9,7 @@ services:
 script:
   - yarn install &&
     yarn build &&
+    yarn lint &&
     yarn test &&
     if [ "$TRAVIS_BRANCH" == "master" ]; then
       docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
