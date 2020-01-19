@@ -24,6 +24,10 @@ body {
   flex: 1;
 }
 
+#root > * {
+  flex: 1 100%;
+}
+
 .dest-canvas {
   max-width: 100%;
 }

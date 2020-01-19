@@ -4,6 +4,7 @@ const TopContainerContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  max-width: 100%;
 `;
 
 const ShowcaseSwitch = styled.div`
