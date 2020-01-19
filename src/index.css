@@ -20,6 +20,7 @@ body {
 #root {
   display: flex;
   flex-direction: column;
+  flex-flow: row wrap;
   flex: 1;
 }
 
