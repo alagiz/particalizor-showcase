@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "antd": "^3.26.5",
-    "particalizor-3000": "^1.1.3",
+    "particalizor-3000": "^1.1.5",
     "prettier": "^1.19.1",
     "ramda": "^0.26.1",
     "react": "^16.12.0",
@@ -56,17 +56,17 @@
     "@types/react-dom": "^16.9.0",
     "@types/styled-components": "^4.4.1",
     "babel-plugin-styled-components": "^1.10.6",
-    "react-app-rewired": "^2.1.5",
-    "customize-cra": "^0.9.1",
     "coveralls": "^3.0.9",
+    "customize-cra": "^0.9.1",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0",
     "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-json": "^1.4.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
-    "enzyme-to-json": "^3.4.0",
-    "jest-canvas-mock": "^2.2.0"
+    "jest-canvas-mock": "^2.2.0",
+    "react-app-rewired": "^2.1.5"
   }
 }

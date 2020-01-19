@@ -19,9 +19,7 @@ const MovingPictureShowcaseView: React.FC<IMovingPictureShowcaseView> = ({
   onHueChannelChange,
   onHueReverseChange,
   onDirectionReverseChange,
-
   onDrop,
-
   particleNumberValue,
   particleTraceWidthValue,
   particleVelocityValue,
@@ -30,7 +28,6 @@ const MovingPictureShowcaseView: React.FC<IMovingPictureShowcaseView> = ({
   hueChannelValue,
   hueReversedValue,
   directionReversedValue,
-
   directionHueOptions,
   switchImageMode,
   switchButtonTitle,

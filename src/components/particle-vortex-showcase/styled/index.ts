@@ -26,15 +26,11 @@ const Images = styled.div`
 
 const ImageContainer = styled.div`
   margin: 10px;
-`;
-
-const ImageContainerImg = styled.img`
   max-width: 100%;
 `;
 
 export const Styled = {
   ImageContainer,
-  ImageContainerImg,
   Images,
   PropertiesContainer,
   PropertiesSet,
