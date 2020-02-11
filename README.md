@@ -19,7 +19,7 @@ available here at the moment => http://3.13.90.180:8080/
     docker stack deploy -c docker-compose.depl.yml particleStackk
     ```
 ## ci/cd
-* on every pull request merge to master and push to master travis runs yarn install and yarn build (yarn test and yarn lint to be added soon)
+* on every pull request merge to master and push to master travis runs **yarn install**, **yarn build**, **yarn test** and **yarn lint**
   * in case those commands were successful:
      * new **docker** image is built and pushed to **docker hub**
      * **docker swarm** stack is updated with the latest **docker** image
