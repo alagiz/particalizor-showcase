@@ -1,5 +1,6 @@
 {
   "name": "particalizor-showcase",
+  "homepage": "/particalizor-3000-showcase",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
