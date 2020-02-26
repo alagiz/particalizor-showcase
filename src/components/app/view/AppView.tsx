@@ -18,12 +18,12 @@ const AppView: React.FC<IAppView> = ({
     );
 
   return (
-    <Styled.TopContainerContainer>
+    <Styled.TopContainer>
       <Styled.ShowcaseSwitch onClick={switchShowcase}>
         {switchButtonTitle}
       </Styled.ShowcaseSwitch>
       {componentToDisplay}
-    </Styled.TopContainerContainer>
+    </Styled.TopContainer>
   );
 };
 

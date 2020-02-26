@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const TopContainerContainer = styled.div`
+const TopContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -17,9 +17,13 @@ const ShowcaseSwitch = styled.div`
   color: black;
   cursor: pointer;
   font-weight: bold;
+
+  &:hover {
+    background: #83838a;
+  }
 `;
 
 export const Styled = {
-  TopContainerContainer,
+  TopContainer,
   ShowcaseSwitch
 };

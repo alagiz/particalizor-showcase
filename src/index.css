@@ -31,3 +31,12 @@ body {
 .particalizor-3000-destination-canvas {
   max-width: 100%;
 }
+
+.ant-select-selection,
+.ant-select-dropdown,
+.ant-input,
+.ant-switch,
+.ant-switch,
+.ant-switch::after {
+    border-radius: 0 !important;
+}
