@@ -34,8 +34,8 @@ body {
 
 .ant-select-selection,
 .ant-select-dropdown,
+ant-slider-handle,
 .ant-input,
-.ant-switch,
 .ant-switch,
 .ant-switch::after {
     border-radius: 0 !important;

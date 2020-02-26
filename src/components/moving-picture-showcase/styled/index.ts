@@ -53,6 +53,7 @@ const ImageContainerImg = styled.img`
 
 const Dashed = styled.div`
   border: 2px dashed #999;
+  cursor: pointer;
 `;
 
 const DropZone = styled.div`
@@ -62,6 +63,7 @@ const DropZone = styled.div`
   max-width: 100%;
   min-height: 300px;
   background: #a8a8b2;
+  cursor: pointer;
 `;
 
 const DropImageText = styled.div`
