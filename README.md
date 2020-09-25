@@ -5,7 +5,7 @@
 
 live demo for [particalizor-3000](https://github.com/ArtemAlagizov/particalizor-3000)
 
-available here => http://artem-alagizov.com/particalizor-3000-showcase
+available here => https://artem-alagizov.com/particalizor-3000-showcase
 
 ## deployment
 * the app is deployed to a **docker swarm** cluster running on a single node (aws ec2 t2.micro)
